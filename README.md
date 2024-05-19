@@ -131,13 +131,6 @@ To remove all Docker images and volumes to start fresh:
 docker-compose down --rmi all -v
 ```
 
-
-### Video Link about the Application: 
-
-```
-Link Will Be Provided
-```
-
 ### Author: 
 ```
 Suleyman Mammadov
