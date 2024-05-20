@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./ass3-ada-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server-logs:/app/logs
+    networks:
+      - app-network
+
+  client:
+    build: ./ass3-ada-client
+    ports:
+      - "8081:8081"
+    depends_on:
+      - server
+    volumes:
+      - ./client-logs:/app/logs
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
